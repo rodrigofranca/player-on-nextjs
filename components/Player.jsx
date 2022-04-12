@@ -31,6 +31,7 @@ export const Player = ({ media, autoplay, poster, onPlaybackStatusChange }) => {
       <fantascope-player
         ref={ref}
         autoplay
+        fluid
       />
     </>
   );
