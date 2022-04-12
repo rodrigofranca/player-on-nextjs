@@ -13,7 +13,6 @@ export const Player = ({ media, autoplay, poster, onPlaybackStatusChange }) => {
 
     const { current: player } = ref;
 
-    player.autoplay = autoplay;
     player.poster = poster;
     player.media = media
 
@@ -21,12 +20,12 @@ export const Player = ({ media, autoplay, poster, onPlaybackStatusChange }) => {
       onPlaybackStatusChange(customEvent.detail)
     );
 
-  }, [ref, autoplay, media]);
+  }, [ref, poster, media]);
 
   return (
     <>
       <Script
-        src="http://localhost:3333/js/fantascope-player.esm.js"
+        src="http://player.fantascope.uol.com.br/js/fantascope-player.esm.js"
         type="module"
       />
       <fantascope-player
